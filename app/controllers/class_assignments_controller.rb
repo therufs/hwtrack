@@ -28,6 +28,12 @@ class ClassAssignmentsController < ApplicationController
 
     respond_to do |format|
       if @class_assignment.save
+        # Make an assignment for each user
+        User.all.each do |u|
+          assignment = Assignment.new(complete: false, link: "", user_id: u.id,
+                                      class_assignment_id: @class_assignment.id)
+          assignment.save
+        end
         format.html { redirect_to @class_assignment, notice: 'Class assignment was successfully created.' }
         format.json { render :show, status: :created, location: @class_assignment }
       else
