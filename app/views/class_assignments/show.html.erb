@@ -20,5 +20,12 @@
   <%= @class_assignment.due %>
 </p>
 
+<p>
+  <strong>Assignees:</strong>
+  <% assignees.each do |a| %>
+    <li><%= a.name %></li>
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_class_assignment_path(@class_assignment) %> |
 <%= link_to 'Back', class_assignments_path %>
