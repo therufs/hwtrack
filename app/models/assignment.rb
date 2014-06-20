@@ -10,4 +10,14 @@ class Assignment < ActiveRecord::Base
     ClassAssignment.find_by_id(class_assignment_id).due
   end
 
+  def assigned_date
+    ClassAssignment.find_by_id(class_assignment_id).assigned
+  end
+
+  def description
+    ClassAssignment.find_by_id(class_assignment_id).description
+  end
+
+  ## is it cool to define methods in the model? 
+
 end
