@@ -15,5 +15,14 @@
   <%= @user.admin %>
 </p>
 
+<p>
+  <strong>Assignments:</strong>
+    <ul>
+    <% own_assignments.each do |a| %>
+      <li><%= a.title %>, due <%= a.due_date %></li>
+    <% end %>
+    </ul>
+</p>
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
