@@ -16,12 +16,25 @@
 </p>
 
 <p>
-  <strong>Assignments:</strong>
+  <strong>Outstanding assignments:</strong>
     <ul>
-    <% own_assignments.each do |a| %>
+    <% outstanding_assignments.each do |a| %>
+    <% if a.due_date < Date.today %>
+      <li><div style="background:yellow"><%= a.title %>, due <%= a.due_date %></div></li> <!-- ## gross -->
+    <% else %>
       <li><%= a.title %>, due <%= a.due_date %></li>
     <% end %>
+    <% end %>
     </ul>
+</p>
+
+<p>
+  <strong>Completed assignments:</strong>
+  <ul>
+    <% completed_assignments.each do |a| %>
+      <li><%= a.title %></li>
+    <% end %>
+  </ul>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |

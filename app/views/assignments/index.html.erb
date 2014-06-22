@@ -16,7 +16,11 @@
       <tr>
         <td><%= assignment.title %></td>
         <td><%= assignment.user.name %></td>
-        <td><%= assignment.complete %></td>
+        <% if assignment.due_date < Date.today && !assignment.complete %>
+          <td bgcolor="yellow"><%= assignment.complete %></td> <!-- ## KLUDGE -->
+        <% else %>
+          <td><%= assignment.complete %></td>
+        <% end %>
         <td><%= assignment.link %></td>
         <td><%= link_to 'Show', assignment %></td>
         <td><%= link_to 'Edit', edit_assignment_path(assignment) %></td>

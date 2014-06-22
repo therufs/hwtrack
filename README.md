@@ -3,11 +3,12 @@ Homework Tracker
 
 Next:  
 Make User pickable from Assignment page. (?)
-Add highlighting for past-due assignments.
+
 Make already-created Class Assignments retroactively assignable, preferably without having to visit each User page individually. (Maybe a tickybox grid on users/index?)
 An updated class_assignment gets reassigned to everyone.
 
 Status 6/22:
+Incomplete & overdue assignments are highlighted in yellow on assignments/index and users/:id.
 Assignments completable from User page.
 Basic validations added on User and ClassAssignment.
 Markdown parser for assignment description functional.
