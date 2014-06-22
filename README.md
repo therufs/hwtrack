@@ -2,13 +2,13 @@ Homework Tracker
 ================
 
 Next:  
-Add validations.
 Make assignments editable from User page.
 Make User pickable from Assignment page. (?)
 Add highlighting for past-due assignments.
 Make already-created Class Assignments retroactively assignable, preferably without having to visit each User page individually. (Maybe a tickybox grid on users/index?)
 
 Status 6/22:
+Basic validations added on User and ClassAssignment.
 Markdown parser for assignment description functional.
 Assignees show completed status.
 Assignees show up the correct number of times.
