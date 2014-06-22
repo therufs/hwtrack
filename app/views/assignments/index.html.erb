@@ -3,6 +3,8 @@
 <table>
   <thead>
     <tr>
+      <th>Assignment</th>
+      <th>Assignee</th>
       <th>Complete</th>
       <th>Link</th>
       <th colspan="3"></th>
@@ -12,6 +14,8 @@
   <tbody>
     <% @assignments.each do |assignment| %>
       <tr>
+        <td><%= assignment.title %></td>
+        <td><%= assignment.user.name %></td>
         <td><%= assignment.complete %></td>
         <td><%= assignment.link %></td>
         <td><%= link_to 'Show', assignment %></td>

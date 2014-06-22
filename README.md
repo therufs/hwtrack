@@ -2,7 +2,7 @@ Homework Tracker
 ================
 
 Next:  
-Make assignments editable from User page.
+Make assignments completable from User page.
 Make User pickable from Assignment page. (?)
 Add highlighting for past-due assignments.
 Make already-created Class Assignments retroactively assignable, preferably without having to visit each User page individually. (Maybe a tickybox grid on users/index?)

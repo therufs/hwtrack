@@ -1,6 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Title:</strong> <%= @assignment.title %><br>
+  <strong>User:</strong> <%= @assignment.user.name %>
+
+  <%= render 'form' %>
+
+
+<p>
   <strong>Complete:</strong>
   <%= @assignment.complete %>
 </p>
