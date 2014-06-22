@@ -1,8 +1,15 @@
 module ClassAssignmentsHelper
 
-def parsed_description
+require 'redcarpet/render_strip'  ## :/
+
+def formatted_description(assignment)
   markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
-  markdown.render(@class_assignment.description).html_safe
+  markdown.render(assignment.description).html_safe
+end
+
+def plain_description(assignment)  ## isn't great; doesn't actually render newlines 
+  markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
+  markdown.render(assignment.description).html_safe
 end
 
   def assignees ## why is everyone getting added twice ? :/

@@ -15,7 +15,7 @@
     <% @class_assignments.each do |class_assignment| %>
       <tr>
         <td><%= class_assignment.title %></td>
-        <td><%= class_assignment.description %></td>
+        <td><%= plain_description(class_assignment) %></td>
         <td><%= class_assignment.assigned %></td>
         <td><%= class_assignment.due %></td>
         <td><%= link_to 'Show', class_assignment %></td>
