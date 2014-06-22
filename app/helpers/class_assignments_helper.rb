@@ -2,15 +2,15 @@ module ClassAssignmentsHelper
 
   def assignees ## why is everyone getting added twice ? :/
     ## hopefully this will be easy to refactor when students & teachers are differentiated.
-    assignees = []
+    assgees = []
     assignments = Assignment.all ## Need to learn how to return multiple records for a query
     assignments.each do |a|
-      if a.class_assignment_id = @class_assignment.id
+      if a.class_assignment_id == @class_assignment.id 
         # find the assignment's user
-        assignees.push(User.find_by_id(a.user_id))
+        assgees.push(User.find_by_id(a.user_id))
       end
     end
-    assignees
+    assgees
   end
 end
 
