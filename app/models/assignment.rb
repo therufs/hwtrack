@@ -2,6 +2,7 @@ class Assignment < ActiveRecord::Base
   belongs_to :class_assignment
   belongs_to :user
 
+
   def title
     ClassAssignment.find_by_id(class_assignment_id).title
   end
@@ -18,6 +19,7 @@ class Assignment < ActiveRecord::Base
     ClassAssignment.find_by_id(class_assignment_id).description
   end
 
-  ## is it cool to define methods in the model? 
+
+  ## is it cool to define methods in the model?
 
 end

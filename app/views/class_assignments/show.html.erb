@@ -22,8 +22,10 @@
 
 <p>
   <strong>Assignees:</strong>
+  <%= assignees %>
   <% assignees.each do |a| %>
-    <li><%= a.name %></li>
+    <li><%= a.name %>'s assignment is <%= complete?(a) %>
+    <!-- # is a's version of this assignment complete -->
   <% end %>
 </p>
 
