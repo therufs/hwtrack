@@ -4,7 +4,7 @@ module UsersHelper
     assignments = Assignment.all
     own = []
     assignments.each do |a|
-      if a.user_id == @user.id && !a.complete
+      if a.user_id == @user.id && !a.complete && a.assigned_date <= Date.today
         own.push a
       end
     end
