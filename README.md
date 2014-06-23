@@ -5,6 +5,7 @@ Next:
 Add links to edit assignments from user/:id page.
 Add validations to prevent assignment date later than due date
 Make root page
+Generate appropriate error messages when login fails
 Differentiate logged in vs logged out users
 Implement Foundation
 Make User pickable from Assignment/ClassAssignment page. (?)
