@@ -5,13 +5,14 @@ Next:
 Add links to edit assignments from user/:id page.
 Add validations to prevent assignment date later than due date
 Make root page
-Roll authentication
+Differentiate logged in vs logged out users
 Implement Foundation
 Make User pickable from Assignment/ClassAssignment page. (?)
 Make already-created Class Assignments retroactively assignable, preferably without having to visit each User page individually. (Maybe a tickybox grid on users/index?)
 An updated class_assignment gets reassigned to everyone. (Maybe not?)
 
 Status 6/22:
+Implement authentication
 Incomplete & overdue assignments are highlighted in yellow on assignments/index and users/:id.
 Not-yet-assigned assignments are not shown.
 Assignments completable from User page.
