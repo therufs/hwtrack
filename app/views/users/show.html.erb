@@ -1,21 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
+<div class="row">
+  <div class="small-4 column left">
+    <strong>Name:</strong>
+    <%= @user.name %>
+  </div>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+  <div class="small-4 column left">
+    <strong>Email:</strong>
+    <%= @user.email %><br><br> <!-- ## kludge! -->
+  </div>
+</div>
 
-<p>
-  <strong>Admin:</strong>
-  <%= @user.admin %>
-</p>
-
-<p>
+<div class="row">
+  <div class="small-8 column">
   <strong>Outstanding assignments:</strong>
     <ul>
     <% outstanding_assignments.each do |a| %>
@@ -26,16 +24,20 @@
     <% end %>
     <% end %>
     </ul>
-</p>
+  </div>
+</div>
 
-<p>
-  <strong>Completed assignments:</strong>
+<div class="row">
+<div class="small-8 column">
+    <strong>Completed assignments:</strong>
   <ul>
     <% completed_assignments.each do |a| %>
       <li><%= a.title %></li>
     <% end %>
   </ul>
 </p>
+</div>
+</div>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

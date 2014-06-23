@@ -11,23 +11,21 @@
     </div>
   <% end %>
 
-  <div class="field">
+<div class="row">
+  <div class="small-8 columns">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
-  </div>
-  <div class="field">
+
     <%= f.label :description %><br>
     <%= f.text_area :description %>
-  </div>
-  <div class="field">
+
     <%= f.label :assigned %><br>
     <%= f.date_select :assigned %>
-  </div>
-  <div class="field">
+
     <%= f.label :due %><br>
     <%= f.date_select :due %>
-  </div>
-  <div class="actions">
+
     <%= f.submit %>
   </div>
+</div>
 <% end %>
