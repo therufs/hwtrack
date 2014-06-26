@@ -18,6 +18,9 @@ class Assignment < ActiveRecord::Base
     ClassAssignment.find_by_id(class_assignment_id).description
   end
 
+  def late?
+    ClassAssignment.find_by_id(class_assignment_id).due < Date.today
+  end
 
   ## is it cool to define methods in the model?
 

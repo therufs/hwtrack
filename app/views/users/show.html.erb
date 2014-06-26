@@ -17,7 +17,7 @@
   <strong>Outstanding assignments:</strong>
     <ul>
     <% outstanding_assignments.each do |a| %>
-      <li><div class="<% a.late? %>"><%= a.title %>, due <%= a.due_date %></div></li>
+      <li><div class="<% a.late? %>"><%= link_to a.title, assignment_path(a) %>, due <%= a.due_date %></div></li>
     <% end %>
     </ul>
   </div>
@@ -28,7 +28,7 @@
     <strong>Completed assignments:</strong>
   <ul>
     <% completed_assignments.each do |a| %>
-      <li><%= a.title %></li>
+      <li><%= link_to a.title, assignment_path(a) %></li>
     <% end %>
   </ul>
 </p>
