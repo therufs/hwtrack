@@ -1,5 +1,6 @@
 <tr>
   <% classassignment.assignments.each do |a| %>
+  <td></td>
   <td><%= a.user.name %></td>
   <% if a.due_date < Date.today && !a.complete %>
     <td bgcolor="yellow"><%= a.complete %></td> <!-- ## KLUDGE -->
