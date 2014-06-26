@@ -2,12 +2,12 @@ Homework Tracker
 ================
 
 Next:
-* Add validations to prevent assignment date later than due date
 * Group Assignments by ClassAssignment ID
 * Make completed assignments only show up if there are complete assignments.
 * Finish styling
 * Add logout machinery
 * Add nav bar
+* Fix: can create assignments w/o a class assignment?
 
 Todo:  
 * Generate appropriate error messages when login fails
@@ -18,7 +18,7 @@ Todo:
 
 Status 6/26:
 * Add links to edit assignments from user/:id page.
-
+* Added validation to prevent assignment date later than due date
 
 Status 6/23:
 * Sign in works; signed in users see different root page vs non-signed-in
