@@ -17,11 +17,7 @@
   <strong>Outstanding assignments:</strong>
     <ul>
     <% outstanding_assignments.each do |a| %>
-    <% if a.due_date < Date.today %>
-      <li><div style="background:yellow"><%= a.title %>, due <%= a.due_date %></div></li> <!-- ## gross -->
-    <% else %>
-      <li><%= a.title %>, due <%= a.due_date %></li>
-    <% end %>
+      <li><div class="<% a.late? %>"><%= a.title %>, due <%= a.due_date %></div></li>
     <% end %>
     </ul>
   </div>

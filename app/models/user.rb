@@ -27,6 +27,12 @@ class User < ActiveRecord::Base
     Digest::SHA1.hexdigest(token.to_s)
   end
 
+  def self.late?
+    if due_date < Date.today
+      "late"
+    end
+  end
+
   private
 
     def create_remember_token
