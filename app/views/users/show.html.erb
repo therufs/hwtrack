@@ -15,14 +15,19 @@
 <div class="row">
   <div class="small-8 column">
   <strong>Outstanding assignments:</strong>
+  <% if !outstanding_assignments.any? %>
+  <p>Nothing due!</p>
+  <% else %>
     <ul>
     <% outstanding_assignments.each do |a| %>
       <li><div class="<% a.late? %>"><%= link_to a.title, assignment_path(a) %>, due <%= a.due_date %></div></li>
+    <% end %>
     <% end %>
     </ul>
   </div>
 </div>
 
+<% if completed_assignments.any? %>
 <div class="row">
 <div class="small-8 column">
     <strong>Completed assignments:</strong>
@@ -34,6 +39,7 @@
 </p>
 </div>
 </div>
+<% end %>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

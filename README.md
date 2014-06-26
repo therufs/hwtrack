@@ -2,7 +2,8 @@ Homework Tracker
 ================
 
 Next:
-* Make completed assignments only show up if there are complete assignments.
+* Fix wonky column headers in assignments index
+* Require creation of users before creation of class assignment, or warn that no one will have it assigned.
 * Finish styling
 * Add logout machinery
 * Add nav bar
@@ -16,6 +17,7 @@ Todo:
 * Make already-created Class Assignments retroactively assignable, preferably without having to visit each User page individually. (Maybe a tickybox grid on users/index?)
 
 Status 6/26:
+* "Completed assignments" section only show up if user has complete assignments.
 * Assignments index page shows each student's assignment per ClassAssignment
 * Add links to edit assignments from user/:id page.
 * Added validation to prevent assignment date later than due date
