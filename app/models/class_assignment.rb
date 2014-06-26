@@ -8,7 +8,7 @@ class ClassAssignment < ActiveRecord::Base
   validates :assigned, presence: true
   validate :due_after_assigned
 
-  def due_after_assigned ## :/ 
+  def due_after_assigned ## :/
     if assigned > due
       errors.add(:due, "date must be after the assigned date")
     end

@@ -12,22 +12,22 @@
   </thead>
 
   <tbody>
-    <% @assignments.each do |assignment| %>
+    <% @class_assignments.each do |ca| %>
       <tr>
-        <td><%= assignment.title %></td>
-        <td><%= assignment.user.name %></td>
-        <% if assignment.due_date < Date.today && !assignment.complete %>
-          <td bgcolor="yellow"><%= assignment.complete %></td> <!-- ## KLUDGE -->
-        <% else %>
-          <td><%= assignment.complete %></td>
-        <% end %>
-        <td><%= assignment.link %></td>
-        <td><%= link_to 'Show', assignment %></td>
-        <td><%= link_to 'Edit', edit_assignment_path(assignment) %></td>
-        <td><%= link_to 'Destroy', assignment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <%= ca.title %>
+        </td>
       </tr>
+      <%= render partial: 'class_assignment', locals: {classassignment: ca} %>
     <% end %>
   </tbody>
+
+
+
+  <!-- <tbody>
+    <%# @assignments.order('class_assignment_id ASC').each do |assignment| %>
+    <%# end %>
+  </tbody> -->
 </table>
 
 <br>

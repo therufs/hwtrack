@@ -2,7 +2,6 @@ Homework Tracker
 ================
 
 Next:
-* Group Assignments by ClassAssignment ID
 * Make completed assignments only show up if there are complete assignments.
 * Finish styling
 * Add logout machinery
@@ -17,6 +16,7 @@ Todo:
 * Make already-created Class Assignments retroactively assignable, preferably without having to visit each User page individually. (Maybe a tickybox grid on users/index?)
 
 Status 6/26:
+* Assignments index page shows each student's assignment per ClassAssignment
 * Add links to edit assignments from user/:id page.
 * Added validation to prevent assignment date later than due date
 
