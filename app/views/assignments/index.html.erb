@@ -12,7 +12,7 @@
   </thead>
 
   <tbody>
-    <% @assignments.each do |assignment| %>
+    <% @assignments.order('class_assignment_id ASC').each do |assignment| %>
       <tr>
         <td><%= assignment.title %></td>
         <td><%= assignment.user.name %></td>
