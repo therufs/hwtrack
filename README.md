@@ -8,6 +8,7 @@ Next:
 * Add nav bar
 * Fix: can create assignments w/o a class assignment?
 * Make assignments disappear when class_assignment is destroyed
+* Button to close class_assignment creation modal doesn't work 
 
 Todo:  
 * Generate appropriate error messages when login fails
