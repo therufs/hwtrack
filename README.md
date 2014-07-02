@@ -2,13 +2,13 @@ Homework Tracker
 ================
 
 Next:
-* Require creation of users before creation of class assignment, or warn that no one will have it assigned.
+* Require creation of users before creation of class assignment, or warn that no one will have it assigned. --> This can be solved by requiring login + existence of students to create class assmt.
 * Finish styling
 * Add logout machinery
 * Add nav bar
 * Fix: can create assignments w/o a class assignment?
 * Make assignments disappear when class_assignment is destroyed
-* Button to close class_assignment creation modal doesn't work 
+* Button to close class_assignment creation modal doesn't work
 
 Todo:  
 * Generate appropriate error messages when login fails
@@ -16,6 +16,9 @@ Todo:
 * Put links to complete homework on class_assignments/index page
 * Make User pickable from Assignment/ClassAssignment page. (?)
 * Make already-created Class Assignments retroactively assignable, preferably without having to visit each User page individually. (Maybe a tickybox grid on users/index?)
+
+Status 7/2:
+* Implement signout. 
 
 Status 6/26:
 * Fix wonky column headers in assignments index
