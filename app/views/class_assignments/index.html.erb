@@ -11,19 +11,7 @@
     </tr>
   </thead>
 
-  <tbody>
-    <% @class_assignments.each do |class_assignment| %>
-      <tr>
-        <td><%= class_assignment.title %></td>
-        <td><%= plain_description(class_assignment) %></td>
-        <td><%= class_assignment.assigned %></td>
-        <td><%= class_assignment.due %></td>
-        <td><%= link_to 'Show', class_assignment %></td>
-        <td><%= link_to 'Edit', edit_class_assignment_path(class_assignment) %></td>
-        <td><%= link_to 'Destroy', class_assignment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+<%= render 'class_assignment' %>
 </table>
 
 <br>

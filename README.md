@@ -7,6 +7,7 @@ Next:
 * Add logout machinery
 * Add nav bar
 * Fix: can create assignments w/o a class assignment?
+* Make assignments disappear when class_assignment is destroyed
 
 Todo:  
 * Generate appropriate error messages when login fails
