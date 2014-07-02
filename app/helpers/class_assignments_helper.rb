@@ -1,16 +1,16 @@
 module ClassAssignmentsHelper
 
-require 'redcarpet/render_strip'  ## :/
+  require 'redcarpet/render_strip'  ## :/
 
-def formatted_description(assignment)
-  markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
-  markdown.render(assignment.description).html_safe
-end
+  def formatted_description(assignment)
+    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+    markdown.render(assignment.description).html_safe
+  end
 
-def plain_description(assignment)  ## isn't great; doesn't actually render newlines 
-  markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
-  markdown.render(assignment.description).html_safe
-end
+  def plain_description(assignment)  ## isn't great; doesn't actually render newlines
+    markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
+    markdown.render(assignment.description).html_safe
+  end
 
   def assignees ## why is everyone getting added twice ? :/
     ## hopefully this will be easy to refactor when students & teachers are differentiated.
@@ -24,7 +24,6 @@ end
     end
     assgees
   end
-end
 
 def complete?(u)
   assignment = Assignment.find_by(user_id: u.id, class_assignment_id: @class_assignment.id)
@@ -33,4 +32,12 @@ def complete?(u)
   else
     "incomplete"
   end
+end
+
+# def no_users_warning
+#   if @users.any?
+#     "confirm: 'There are no users, so your assignment will not be assigned to anyone.  Proceed?'"
+#   end
+# end
+
 end

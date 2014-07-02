@@ -24,6 +24,7 @@ class ClassAssignmentsController < ApplicationController
   # POST /class_assignments
   # POST /class_assignments.json
   def create
+    @users = User.all
     @class_assignment = ClassAssignment.new(class_assignment_params)
 
     respond_to do |format|
