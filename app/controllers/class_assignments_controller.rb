@@ -15,6 +15,10 @@ class ClassAssignmentsController < ApplicationController
   # GET /class_assignments/new
   def new
     @class_assignment = ClassAssignment.new
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   # GET /class_assignments/1/edit
@@ -36,7 +40,10 @@ class ClassAssignmentsController < ApplicationController
           assignment.save
         end
         format.html { redirect_to @class_assignment, notice: 'Class assignment was successfully created.' }
-        format.json { render :show, status: :created, location: @class_assignment }
+        format.js do
+          @class_assignments = ClassAssignment.all
+        end
+        # format.json { render :show, status: :created, location: @class_assignment }
       else
         format.html { render :new }
         format.json { render json: @class_assignment.errors, status: :unprocessable_entity }
