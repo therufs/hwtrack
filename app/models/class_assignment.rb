@@ -1,6 +1,6 @@
 class ClassAssignment < ActiveRecord::Base
   # belongs_to :teacher
-  has_many :assignments
+  has_many :assignments, dependent: :destroy
 
   validates :title, presence: true
   validates :description, presence: true
