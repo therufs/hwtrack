@@ -2,13 +2,13 @@ Homework Tracker
 ================
 
 Next:
-* Fix JS loading
 * Require creation of users before creation of class assignment, or warn that no one will have it assigned. --> This can be solved by requiring login + existence of students to create class assmt.
 * Finish styling
 * Fix: can create assignments w/o a class assignment (?)
 * Make assignments disappear when class_assignment is destroyed
 * QA button to close class_assignment creation modal -- works now but dunno why
 * Late assignment highlighting doesn't work on user pages
+* Clean up unnecessary links
 
 Todo:  
 * Generate appropriate error messages when login fails
