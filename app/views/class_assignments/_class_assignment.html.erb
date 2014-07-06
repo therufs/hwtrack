@@ -8,6 +8,6 @@
       <td><%= class_assignment.due %></td>
       <td><%= link_to 'Show', class_assignment %></td>
       <td><%= link_to 'Edit', edit_class_assignment_path(class_assignment) %></td>
-      <td><%= link_to 'Destroy', class_assignment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to 'Destroy', class_assignment, method: :delete, data: { confirm: 'This will delete all records of student completion, including links and completed dates.  Proceed?' } %></td>
     </tr>
   <% end %>
