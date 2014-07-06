@@ -2,7 +2,6 @@ Homework Tracker
 ================
 
 Next:
-* Require creation of users before creation of class assignment, or warn that no one will have it assigned. --> This can be solved by requiring login + existence of students to create class assmt.
 * Finish styling
 * QA button to close class_assignment creation modal -- works now but dunno why
 * Differentiate admins (teachers):
@@ -19,6 +18,8 @@ Todo:
 * Make already-created Class Assignments retroactively assignable, preferably without having to visit each User page individually. (Maybe a tickybox grid on users/index?)
 
 Status 7/6:
+* Non-admin users must exist in order for a class_assignment to be created.
+* No students error provides link to create a student.
 * Assignments disappear when class_assignment is destroyed
 * Clean up unnecessary links & remove corresponding controller actions
 * Late assignment highlighting works on user pages

@@ -5,7 +5,7 @@
 
       <ul>
       <% @class_assignment.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <li><%= better_message(message).html_safe %></li>
       <% end %>
       </ul>
     </div>
