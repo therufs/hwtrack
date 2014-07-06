@@ -1,20 +1,7 @@
-
 <p>
   <strong>Title:</strong> <%= @assignment.title %><br>
   <strong>User:</strong> <%= @assignment.user.name %>
 
   <%= render 'form' %>
 
-
-<p>
-  <strong>Complete:</strong>
-  <%= @assignment.complete %>
-</p>
-
-<p>
-  <strong>Link:</strong>
-  <%= @assignment.link %>
-</p>
-
-<%= link_to 'Edit', edit_assignment_path(@assignment) %> |
-<%= link_to 'Back', assignments_path %>
+<%= link_to 'View all my assignments', user_path(id: @assignment.user.id) %>

@@ -5,16 +5,13 @@ Next:
 * Finish styling
 * QA button to close class_assignment creation modal -- works now but dunno why
 * Differentiate admins (teachers):
-  * must be admin to create class_assignment
-  * must be admin to delete class_assignment
-  * must be admin to delete users arbitrarily
   * admins don't get their own (or any?) assignments assigned to them
 * Delete user's individual assignments upon user deletion
 * Restrict user editing & assignment submission to signed in user
 * Update routes.rb to correspond to pruned controllers
 
 Todo:  
-* Make notices work
+* Make admins able to view user pages
 * Implement more modals as would be spiffy
 * Generate appropriate error messages when login fails
 * Put links to complete homework on class_assignments/index page
@@ -22,6 +19,8 @@ Todo:
 * Make already-created Class Assignments retroactively assignable, preferably without having to visit each User page individually. (Maybe a tickybox grid on users/index?)
 
 Status 7/6:
+* Improve views to correspond to logged in/admin status
+* Make notices work
 * Must be logged in to do most things. Must be admin to create a new user or class_assignment, or to destroy users, class_assignments, and assignments.
 * Non-admin users must exist in order for a class_assignment to be created.
 * No students error provides link to create a student.

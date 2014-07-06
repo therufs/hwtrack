@@ -1,5 +1,5 @@
-<tr>
-  <% classassignment.assignments.each do |a| %>
+<% classassignment.assignments.each do |a| %>
+  <tr>
     <td></td>
     <td><%= a.user.name %></td>
     <% if a.due_date < Date.today && !a.complete %>
@@ -10,5 +10,5 @@
     <td><%= a.link %></td>
     <td><%= link_to 'Show', a %></td>
     <td><%= link_to 'Edit', edit_assignment_path(a) %></td>
-  <% end %>
-</tr>
+  </tr>
+<% end %>

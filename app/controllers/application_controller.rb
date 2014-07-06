@@ -11,8 +11,4 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def is_admin?
-    redirect_to(signin_path) unless current_user && current_user.admin?
-  end
-
 end

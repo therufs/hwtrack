@@ -10,18 +10,7 @@
   </thead>
 
   <tbody>
-    <% @class_assignments.each do |ca| %>
-    <table>
-    <tr>
-      <tr>
-        <td colspan="3">
-          <%= ca.title %>
-        </td>
-      </tr>
-      <%= render partial: 'class_assignment', locals: {classassignment: ca} %>
-    <% end %>
-  </tr>
-</table>
+    <%= render partial: 'class_assignments', locals: {class_assignments: @class_assignments} %>
   </tbody>
 
 </table>

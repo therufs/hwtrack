@@ -10,6 +10,13 @@
   </div>
 </div>
 
+<% if current_user.admin? %>
+
+<tbody>
+<%= render partial: 'assignments/class_assignments', locals: {class_assignments: @class_assignments} %>
+</tbody>
+
+<% else %>
 <div class="row">
   <div class="small-8 column">
   <strong>Outstanding assignments:</strong>
@@ -37,4 +44,5 @@
 </p>
 </div>
 </div>
+<% end %>
 <% end %>

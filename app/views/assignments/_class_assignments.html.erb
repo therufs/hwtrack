@@ -1,0 +1,12 @@
+<% class_assignments.each do |ca| %>
+<table>
+<tr>
+  <tr>
+    <td colspan="3">
+      <%= ca.title %>
+    </td>
+  </tr>
+  <%= render partial: 'assignments/class_assignment', locals: {classassignment: ca} %>
+<% end %>
+</tr>
+</table>

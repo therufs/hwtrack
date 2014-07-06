@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :signed_in_user
-  before_action :correct_user, only: [:show, :edit, :update, :destroy]
+  before_action :correct_user, only: [:show, :edit, :update, :destroy] ## hmm.  Admins should be able to view & edit users too
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :is_admin?, only: [:create, :destroy]
 
@@ -14,6 +14,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    @class_assignments = ClassAssignment.all
   end
 
   # GET /users/new

@@ -26,7 +26,11 @@ module SessionsHelper
 
   def correct_user
     @user = User.find(params[:id])
-    redirect_to root_url, notice: "Can't edit other people." unless current_user?(@user)
+    redirect_to root_url, notice: "That action is only available to its user." unless current_user?(@user)
+  end
+
+  def is_admin?
+    redirect_to signin_path, notice: "That action is restricted to admins." unless current_user && current_user.admin?
   end
 
   def save_location
