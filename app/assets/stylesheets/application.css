@@ -20,10 +20,20 @@
    margin:20px;
  }
 
- div {
+div {
    margin: 20px;
  }
 
 .late {
   background: yellow;
+}
+
+#nav {
+  background: black;
+  color: white;
+  margin: 0px;
+}
+
+.nav-item {
+  text-align: center;
 }

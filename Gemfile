@@ -35,6 +35,9 @@ gem 'foundation-rails'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+# Suppress lots of log messages about assets
+gem 'quiet_assets', group: :development
+
 # Use unicorn as the app server
 # gem 'unicorn'
 

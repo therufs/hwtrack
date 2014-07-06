@@ -1,0 +1,31 @@
+
+<nav class="top-bar" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><%= link_to 'HW Tracker', root_path %></h1> <!-- ## why! -->
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <% if signed_in? %>
+      <li class="has-dropdown">
+        <%= link_to current_user.name, current_user %>
+        <ul class="dropdown">
+          <li><%= link_to 'My Assignments', user_path(current_user) %></li>
+          <li><%= link_to 'All Assignments', assignments_path %></li>
+          <li><%= link_to 'New Assignment', new_class_assignment_path %></li>
+          <li><%= link_to 'Edit Info', edit_user_path(current_user) %></li>
+          <li><%= link_to 'Sign Out', signout_path, method: :delete %></li>
+        </ul>
+      </li>
+      <% else %>
+      <li><%= link_to "Sign in", signin_path %></li>
+      <% end %>
+    </ul>
+  </section>
+
+
+  <!-- ## modify hover behavior a little bit -->
+
+</nav>
