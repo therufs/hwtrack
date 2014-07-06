@@ -7,7 +7,6 @@ Next:
 * Fix: can create assignments w/o a class assignment (?)
 * Make assignments disappear when class_assignment is destroyed
 * QA button to close class_assignment creation modal -- works now but dunno why
-* Late assignment highlighting doesn't work on user pages
 * Clean up unnecessary links
 
 Todo:  
@@ -18,6 +17,7 @@ Todo:
 * Make already-created Class Assignments retroactively assignable, preferably without having to visit each User page individually. (Maybe a tickybox grid on users/index?)
 
 Status 7/6:
+* Late assignment highlighting works on user pages
 * Added nav bar
 
 Status 7/2:

@@ -20,7 +20,7 @@
   <% else %>
     <ul>
     <% outstanding_assignments.each do |a| %>
-      <li><div class="<% a.late? %>"><%= link_to a.title, assignment_path(a) %>, due <%= a.due_date %></div></li>
+      <li><div class="<%= a.late? %>"><%= link_to a.title, assignment_path(a) %>, due <%= a.due_date %></div></li>
     <% end %>
     <% end %>
     </ul>
