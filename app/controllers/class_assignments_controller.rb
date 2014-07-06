@@ -1,4 +1,5 @@
 class ClassAssignmentsController < ApplicationController
+  before_action :is_admin?
   before_action :set_class_assignment, only: [:show, :edit, :update, :destroy]
 
   # GET /class_assignments

@@ -1,5 +1,7 @@
 class AssignmentsController < ApplicationController
+  before_action :signed_in_user
   before_action :set_assignment, only: [:show, :edit, :update, :destroy]
+  before_action :is_admin?, only: :destroy
 
   # GET /assignments
   # GET /assignments.json

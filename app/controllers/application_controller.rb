@@ -4,12 +4,15 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   include SessionsHelper
 
-  ## doesn't work :/  try User.any?
-  def no_users_warning
-    if !@users.any?
-      "confirm: 'There are no users, so your assignment will not be assigned to anyone.  Proceed?'"
+  def signed_in_user
+    unless signed_in?
+      save_location
+      redirect_to signin_url, notice: "You must sign in to do that."
     end
   end
 
+  def is_admin?
+    redirect_to(signin_path) unless current_user && current_user.admin?
+  end
 
 end
