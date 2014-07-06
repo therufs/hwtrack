@@ -35,8 +35,8 @@ class ClassAssignmentsController < ApplicationController
       if @class_assignment.save
         # Make an assignment for each user
         User.all.each do |u|
-          assignment = Assignment.new(complete: false, link: "", user_id: u.id,
-                                      class_assignment_id: @class_assignment.id)
+          assignment = @class_assignment.assignments.build(
+            complete: false, link: "", user_id: u.id)
           assignment.save
         end
         format.html { redirect_to @class_assignment, notice: 'Class assignment was successfully created.' }

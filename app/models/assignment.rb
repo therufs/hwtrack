@@ -1,25 +1,28 @@
 class Assignment < ActiveRecord::Base
   belongs_to :class_assignment
   belongs_to :user
+  validates :class_assignment_id, presence: true
+
+  # @parent = ClassAssignment.find_by_id(class_assignment_id)
 
   def title
-    ClassAssignment.find_by_id(class_assignment_id).title
+    class_assignment.title
   end
 
   def due_date
-    ClassAssignment.find_by_id(class_assignment_id).due
+    class_assignment.due
   end
 
   def assigned_date
-    ClassAssignment.find_by_id(class_assignment_id).assigned
+    class_assignment.assigned
   end
 
   def description
-    ClassAssignment.find_by_id(class_assignment_id).description
+    class_assignment.description
   end
 
   def late?
-    if ClassAssignment.find_by_id(class_assignment_id).due < Date.today
+    if class_assignment.due < Date.today
       "late"
     else
       "ok"
