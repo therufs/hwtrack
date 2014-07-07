@@ -4,8 +4,6 @@ Homework Tracker
 Next:
 * Finish styling
 * QA button to close class_assignment creation modal -- works now but dunno why
-* Differentiate admins (teachers):
-  * admins don't get their own (or any?) assignments assigned to them
 * Delete user's individual assignments upon user deletion
 * Restrict user editing & assignment submission to signed in user
 * Update routes.rb to correspond to pruned controllers
@@ -19,6 +17,7 @@ Todo:
 * Make already-created Class Assignments retroactively assignable, preferably without having to visit each User page individually. (Maybe a tickybox grid on users/index?)
 
 Status 7/6:
+* Admins don't get assignments assigned to them
 * Improve views to correspond to logged in/admin status
 * Make notices work
 * Must be logged in to do most things. Must be admin to create a new user or class_assignment, or to destroy users, class_assignments, and assignments.
