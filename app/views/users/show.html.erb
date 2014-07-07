@@ -20,7 +20,7 @@
 <div class="row">
   <div class="small-8 column">
   <strong>Outstanding assignments:</strong>
-  <% if !outstanding_assignments.any? %>
+  <% if outstanding_assignments.none? %>
   <p>Nothing due!</p>
   <% else %>
     <ul>

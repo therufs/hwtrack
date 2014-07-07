@@ -35,7 +35,7 @@ class ClassAssignmentsController < ApplicationController
     respond_to do |format|
       if @class_assignment.save
         # Make an assignment for each user
-        User.all.each do |u|
+        User.where(admin:false).each do |u|
           assignment = @class_assignment.assignments.build(
             complete: false, link: "", user_id: u.id)
           assignment.save

@@ -2,13 +2,15 @@ Homework Tracker
 ================
 
 Next:
+* Let admins see user/show page
+* Add link to edit/delete class_assignment in class_assignment partial
 * Finish styling
 * QA button to close class_assignment creation modal -- works now but dunno why
 * Delete user's individual assignments upon user deletion
-* Restrict user editing & assignment submission to signed in user
 * Update routes.rb to correspond to pruned controllers
 
 Todo:  
+* Fix time zones
 * Make admins able to view user pages
 * Implement more modals as would be spiffy
 * Generate appropriate error messages when login fails
