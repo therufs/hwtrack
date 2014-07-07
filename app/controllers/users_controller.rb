@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :signed_in_user
-  before_action :correct_user, only: [:show, :edit, :update, :destroy] ## hmm.  Admins should be able to view & edit users too
+  before_action :correct_user, only: [:show, :edit, :update] 
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :is_admin?, only: [:create, :destroy]
 
@@ -75,6 +75,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name, :email, :password, :password_confirmation)
+      params.require(:user).permit(:name, :email, :password, :password_confirmation, :admin)
     end
 end
