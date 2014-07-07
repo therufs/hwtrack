@@ -2,8 +2,14 @@
 <table>
 <tr>
   <tr>
-    <td colspan="3">
+    <td colspan="4">
       <%= ca.title %>
+    </td>
+    <td>
+      <%= link_to "Edit", edit_class_assignment_path(ca.id) %>
+    </td>
+    <td>
+      <%= link_to "Delete", class_assignment_path(ca.id), method: :delete %>
     </td>
   </tr>
   <%= render partial: 'assignments/class_assignment', locals: {classassignment: ca} %>

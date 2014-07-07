@@ -12,9 +12,13 @@
 
 <% if current_user.admin? %>
 
-<tbody>
-<%= render partial: 'assignments/class_assignments', locals: {class_assignments: @class_assignments} %>
-</tbody>
+  <% if @class_assignments.any? %>
+    <tbody>
+    <%= render partial: 'assignments/class_assignments', locals: {class_assignments: @class_assignments} %>
+    </tbody>
+  <% else %>
+    <p>No class assignments!  <%= link_to "Make one?", new_class_assignment_path %>
+  <% end %>
 
 <% else %>
 <div class="row">

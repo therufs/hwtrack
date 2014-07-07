@@ -19,6 +19,7 @@ Todo:
 * Make already-created Class Assignments retroactively assignable, preferably without having to visit each User page individually. (Maybe a tickybox grid on users/index?)
 
 Status 7/6:
+* Deployed to Heroku
 * Admins don't get assignments assigned to them
 * Improve views to correspond to logged in/admin status
 * Make notices work
