@@ -72,7 +72,9 @@ class ClassAssignmentsController < ApplicationController
   def destroy
     @class_assignment.destroy
     respond_to do |format|
-      format.html { redirect_to class_assignments_url, notice: 'Class assignment was successfully destroyed.' }
+      format.html do
+        redirect_to class_assignments_url, notice: 'Class assignment was successfully destroyed.'
+      end
       format.json { head :no_content }
     end
   end

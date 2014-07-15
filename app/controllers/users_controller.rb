@@ -1,9 +1,10 @@
+require 'pry'
+
 class UsersController < ApplicationController
   before_action :signed_in_user
-  before_action :correct_user, only: [:show, :edit, :update] 
+  before_action :correct_user, only: [:show, :edit, :update]
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :is_admin?, only: [:create, :destroy]
-
 
   # GET /users
   # GET /users.json
@@ -76,5 +77,14 @@ class UsersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
       params.require(:user).permit(:name, :email, :password, :password_confirmation, :admin)
+    end
+
+    def correct_user
+      # Currently, this finds the user with the :id param of the requested route and
+      # redirects if that user isn't the current_user.
+      user = User.find(params[:id])
+      unless current_user?(user) || current_user.admin
+        redirect_to user_path(id: current_user.id), notice: "That action is only available to its own user."
+      end
     end
 end

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :assignments
+  resources :assignments, only: [:index, :show, :edit, :update]
   resources :class_assignments
   resources :users
   resources :sessions, only: [:new, :create, :destroy]

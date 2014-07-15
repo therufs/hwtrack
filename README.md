@@ -2,22 +2,28 @@ Homework Tracker
 ================
 
 Next:
-* Let admins see user/show page
 * Finish styling
-* QA button to close class_assignment creation modal -- works now but dunno why
-* Delete user's individual assignments upon user deletion
-* Update routes.rb to correspond to pruned controllers
+* Make something more useful happen when viewing deleted assignment
 
 Todo:  
+* Fix need to call correct_user by nesting routes
 * Fix time zones
-* Make admins able to view user pages
 * Implement more modals as would be spiffy
 * Generate appropriate error messages when login fails
 * Put links to complete homework on class_assignments/index page
 * Make User pickable from Assignment/ClassAssignment page. (?)
 * Make already-created Class Assignments retroactively assignable, preferably without having to visit each User page individually. (Maybe a tickybox grid on users/index?)
+* Click
+
+Status 7/15:
+* Call correct_user when updating or viewing assignment
+* User's individual assignments are deleted upon user deletion
+* Updated routes.rb
+* Accepted that modal works; will reevaluate if it stops?
 
 Status 7/6:
+* Admins can see user/show page for anyone
+* Permit new users to be created as admins.
 * Added link to edit/delete class_assignment in class_assignment partial
 * Deployed to Heroku
 * Admins don't get assignments assigned to them
