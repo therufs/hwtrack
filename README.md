@@ -2,6 +2,7 @@ Homework Tracker
 ================
 
 Next:
+* Factor api actions out into their own controller
 * Finish styling
 * Make something more useful happen when viewing deleted assignment
 

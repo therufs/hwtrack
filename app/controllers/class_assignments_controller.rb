@@ -6,11 +6,19 @@ class ClassAssignmentsController < ApplicationController
   # GET /class_assignments.json
   def index
     @class_assignments = ClassAssignment.all
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
 
   # GET /class_assignments/1
   # GET /class_assignments/1.json
   def show
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
 
   # GET /class_assignments/new
@@ -44,11 +52,13 @@ class ClassAssignmentsController < ApplicationController
         format.js do
           @class_assignments = ClassAssignment.all
         end
-        # format.json { render :show, status: :created, location: @class_assignment }
+        format.json { render :show, status: :created, location: @class_assignment }
       else
-        format.html { render :new }
-        format.json { render json: @class_assignment.errors, status: :unprocessable_entity }
-        format.js { render :new }
+        respond_to do |format|
+          format.html { render :new }
+          format.json { render json: @class_assignment.errors, status: :unprocessable_entity }
+          format.js { render :new }
+        end
       end
     end
   end

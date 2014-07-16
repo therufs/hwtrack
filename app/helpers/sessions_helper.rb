@@ -17,7 +17,11 @@ module SessionsHelper
 
   def current_user
     remember_token = User.digest(cookies[:remember_token])
-    @current_user ||= User.find_by(remember_token: remember_token)
+    @current_user ||= if request.format.symbol == :json
+      User.find_by_api_token(params[:api_token]) ## this seems bad
+    else
+      User.find_by(remember_token: remember_token)
+    end
   end
 
   def current_user?(user)

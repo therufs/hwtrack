@@ -68,6 +68,8 @@ GEM
     quiet_assets (1.0.3)
       railties (>= 3.1, < 5.0)
     rack (1.5.2)
+    rack-jsonp-middleware (0.0.9)
+      rack
     rack-test (0.6.2)
       rack (>= 1.0)
     rails (4.1.1)
@@ -143,6 +145,7 @@ DEPENDENCIES
   pg
   pry
   quiet_assets
+  rack-jsonp-middleware
   rails (= 4.1.1)
   rails_12factor
   redcarpet

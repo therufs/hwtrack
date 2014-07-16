@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
 
   before_save { self.email = email.downcase }
   before_create :create_remember_token
+  before_save :create_api_token
 
   has_many :assignments, dependent: :destroy
 
@@ -37,6 +38,12 @@ class User < ActiveRecord::Base
 
     def create_remember_token
       self.remember_token = User.digest(User.new_remember_token)
+    end
+
+    def create_api_token
+      if api_token.nil?
+        self.api_token = "batterystaplehorse"
+      end
     end
 
 end
